@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classeur de prompts — OFFLINE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:#0a0a0f;color:#e0e0e0;padding:16px}
+h1{font-size:1.6rem;margin-bottom:4px;background:linear-gradient(135deg,#ff6b9d,#c44dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:#888;font-size:0.85rem;margin-bottom:16px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.controls input,.controls select{padding:8px 14px;border-radius:8px;border:1px solid #333;background:#151520;color:#e0e0e0;font-size:0.85rem}
+.controls input{flex:1;min-width:200px}
+.controls .count{color:#888;font-size:0.8rem}
+.tag-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tag-filters button{padding:4px 12px;border-radius:20px;border:1px solid #333;background:#151520;color:#aaa;font-size:0.75rem;cursor:pointer;transition:all .15s}
+.tag-filters button:hover{border-color:#ff6b9d66}
+.tag-filters button.active{background:#ff6b9d22;border-color:#ff6b9d;color:#ff6b9d}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:10px}
+.card{background:#12121a;border-radius:10px;padding:14px;border:1px solid #222;transition:all .15s}
+.card:hover{border-color:#ff6b9d33}
+.card .id{font-size:0.65rem;color:#555;margin-bottom:4px;font-family:monospace}
+.card .tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}
+.card .tags span{padding:1px 8px;border-radius:10px;font-size:0.65rem;background:#1a1a2a;color:#888}
+.card .tags .nsfw{border:1px solid #ff6b6b44;color:#ff6b6b}
+.card .tags .sfw{border:1px solid #6bff6b44;color:#6bff6b}
+.card .pos{font-size:0.78rem;line-height:1.5;color:#bbb;max-height:120px;overflow:hidden;position:relative}
+.card .pos.expanded{max-height:none}
+.card .expand{font-size:0.7rem;color:#ff6b9d;cursor:pointer;margin-top:4px;display:inline-block}
+.card .neg{font-size:0.7rem;color:#666;margin-top:6px;max-height:40px;overflow:hidden;cursor:pointer}
+.card .neg:hover{color:#999}
+.card .neg.expanded{max-height:none}
+.stats{color:#666;font-size:0.8rem;margin-bottom:12px}
+@media(max-width:500px){#grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<h1>✦ Classeur de prompts</h1>
+<p class="sub">INSTARAW + 3zur3 — offline · <span id="totalCount">0</span> prompts</p>
+
+<div class="controls">
+  <input id="search" placeholder="Rechercher dans les prompts, tags, ID..." oninput="filter()">
+  <select id="nsfwFilter" onchange="filter()">
+    <option value="all">Tous</option>
+    <option value="nsfw">NSFW seulement</option>
+    <option value="sfw">SFW seulement</option>
+  </select>
+  <span class="count" id="filterCount"></span>
+</div>
+
+<div class="tag-filters" id="tagFilters"></div>
+<div id="grid">Chargement...</div>
+
+<script>
+let allData = [];
+const COMMON_TAGS = ['1girl','nsfw','sfw','portrait','selfie','bedroom','outdoors','nude','topless','cleavage','mirror selfie','amateur photo','smartphone photo','flash','lingerie','bikini'];
+
+// Load JSON from same folder
+async function loadData() {
+  try {
+    const resp = await fetch('prompts.db.json');
+    allData = await resp.json();
+    document.getElementById('totalCount').textContent = allData.length;
+    render();
+  } catch(e) {
+    // If prompts.db.json not in same folder, try local file
+    document.getElementById('grid').innerHTML = 'Charge le fichier <code>prompts.db.json</code> dans le même dossier que cette page HTML, ou utilise le bouton ci-dessous.';
+    document.getElementById('grid').innerHTML += '<br><br><input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">';
+  }
+}
+
+function loadFile(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    allData = JSON.parse(e.target.result);
+    document.getElementById('totalCount').textContent = allData.length;
+    document.getElementById('grid').innerHTML = '';
+    render();
+  };
+  reader.readAsText(file);
+}
+
+function render() {
+  // Build tag filter buttons
+  const tagCounts = {};
+  allData.forEach(item => {
+    (item.tags || []).forEach(t => {
+      tagCounts[t] = (tagCounts[t] || 0) + 1;
+    });
+  });
+  
+  const topTags = Object.entries(tagCounts)
+    .sort((a,b) => b[1] - a[1])
+    .filter(([t,c]) => c > 100 || COMMON_TAGS.includes(t))
+    .slice(0, 40);
+  
+  const tf = document.getElementById('tagFilters');
+  tf.innerHTML = '<button class="active" data-tag="all" onclick="setTag(this,\'all\')">Tous</button>' +
+    topTags.map(([tag, count]) => 
+      `<button data-tag="${tag}" onclick="setTag(this,'${tag}')">${tag} (${count})</button>`
+    ).join('');
+  
+  filter();
+}
+
+let activeTag = 'all';
+function setTag(btn, tag) {
+  document.querySelectorAll('.tag-filters button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeTag = tag;
+  filter();
+}
+
+function filter() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const nsfwFilter = document.getElementById('nsfwFilter').value;
+  
+  const filtered = allData.filter(item => {
+    const tags = item.tags || [];
+    const prompt = item.prompt || {};
+    const pos = (prompt.positive || '').toLowerCase();
+    const neg = (prompt.negative || '').toLowerCase();
+    const id = (item.id || '').toLowerCase();
+    const tagStr = tags.join(' ').toLowerCase();
+    
+    // Tag filter
+    if (activeTag !== 'all' && !tags.includes(activeTag)) return false;
+    
+    // NSFW/SFW filter
+    if (nsfwFilter === 'nsfw' && !tags.includes('nsfw')) return false;
+    if (nsfwFilter === 'sfw' && !tags.includes('sfw')) return false;
+    
+    // Search
+    if (q && !pos.includes(q) && !neg.includes(q) && !tagStr.includes(q) && !id.includes(q)) return false;
+    
+    return true;
+  });
+  
+  document.getElementById('filterCount').textContent = `${filtered.length} / ${allData.length} affichés`;
+  
+  const grid = document.getElementById('grid');
+  grid.innerHTML = filtered.slice(0, 500).map(item => {
+    const tags = item.tags || [];
+    const prompt = item.prompt || {};
+    const pos = prompt.positive || '';
+    const neg = prompt.negative || '';
+    const id = item.id || '';
+    
+    const tagHtml = tags.slice(0, 20).map(t => {
+      let cls = '';
+      if (t === 'nsfw') cls = 'nsfw';
+      if (t === 'sfw') cls = 'sfw';
+      return `<span class="${cls}">${t}</span>`;
+    }).join(' ');
+    
+    return `<div class="card">
+      <div class="id">${id.slice(0,20)}</div>
+      <div class="tags">${tagHtml}</div>
+      <div class="pos" id="pos-${id.slice(0,10)}">${escapeHtml(pos)}</div>
+      <span class="expand" onclick="expand('pos-${id.slice(0,10)}')">+ voir plus</span>
+      <div class="neg" id="neg-${id.slice(0,10)}">⛔ ${escapeHtml(neg.slice(0,200))}</div>
+    </div>`;
+  }).join('');
+  
+  if (filtered.length > 500) {
+    grid.innerHTML += `<div style="text-align:center;color:#666;padding:20px">... et ${filtered.length - 500} de plus. Affine ta recherche.</div>`;
+  }
+}
+
+function expand(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('expanded');
+  el.nextElementSibling.textContent = el.classList.contains('expanded') ? '- réduire' : '+ voir plus';
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+loadData();
+</script>
+</body>
+</html>
