@@ -107,5 +107,98 @@
         "color_grading": "natural — warm tropical sun tones, no grade applied, slightly high contrast from direct midday sun"
       }
     }
+  },
+  {
+    "id": "ASUKA_VID_01_HELMET_COSTUME_SNAP_TRANSITION",
+    "tags": [
+      "cosplay",
+      "evangelion",
+      "asuka langley shikinami",
+      "plugsuit",
+      "helmet",
+      "video",
+      "tiktok trend",
+      "outfit transition",
+      "snap transition",
+      "gaming chair",
+      "mirror selfie",
+      "reference-based",
+      "10s"
+    ],
+    "classification": {
+      "personnage": "asuka_cosplay",
+      "type": "video_prompt",
+      "shots": 3,
+      "duration": "10s",
+      "aspect_ratio": "9:16"
+    },
+    "video_prompt": {
+      "prompt": "Young woman with wavy blonde-to-light-brown balayage hair, fair skin with light natural freckles across nose and cheeks, blue eyes, seated cross-legged in a black-and-grey gaming chair in a bedroom lit by warm golden lamp/sunset light. She is wearing a form-fitting black mini dress and sheer black thigh-high stockings, holding a phone up for a mirror selfie. At the very start of the clip she already has the weathered EVA-02 pilot helmet on her head — aged metallic red-and-silver shell, chipped battle-worn paint, dark blue-tinted visor fully down concealing her face, yellow/blue racing stripe, fin-shaped ear pieces. Preserve her exact body proportions, seated pose, room, gaming chair, and lighting from the reference photo throughout the entire clip — only the helmet (already present) and later the bodysuit are ever added or changed.",
+      "reference_images": {
+        "model_reference": "Photo 2 — source of identity, body proportions, seated pose, gaming chair, room, and lighting. Held constant, never altered.",
+        "costume_reference": "Photo 1 — official EVA-02 plugsuit character sheet: orange/red fitted bodysuit with black side panels, green centre-chest stripe, white core connector ports, integrated gloves and boots, curved panel seams matching torso/hip lines.",
+        "helmet_reference": "Photo 3 — physical prop build of the helmet, not the clean anime cel-shaded look: scratched/chipped metallic paint, matte battle-worn finish, dark blue visor. This weathered version is what she wears for the entire clip."
+      },
+      "script": null,
+      "motion_breakdown": {
+        "0-3s": {
+          "action": "She sits in the gaming chair exactly as in the reference photo, helmet already on and visor down, phone held up for the mirror-selfie framing. Natural micro-movements — slight breathing, small chair swivel, head tilts subtly toward the camera as if sizing up the shot. Free hand rests near her chest, fingers relaxed, about to snap.",
+          "direction": "Builds anticipation without telegraphing the cut — treat this like the 'before' beat of a TikTok outfit-transition edit, casual and unhurried."
+        },
+        "3-4s": {
+          "action": "Her free hand snaps once at chest height. On the exact snap frame, a fast 2-3 frame white-orange light bloom sweeps across her seated body — this is the transition point, not a slow dissolve.",
+          "direction": "Hard cut sold by the light flash and a synced snap/whoosh sound cue, not a gradual morph. Chair, framing, and lighting must not shift across the cut — only the outfit beneath the neck changes."
+        },
+        "4-10s": {
+          "action": "She is now in the complete EVA-02 plugsuit exactly matching Photo 1, seated in the identical cross-legged pose in the same chair. Helmet is unchanged and still on from before. Camera does a subtle 5-8% push-in for payoff. Free hand returns to hold the phone up, completing the selfie framing. Small confident chair swivel or head tilt to sell the reveal since her face stays hidden behind the visor. Hold the pose through the outro.",
+          "direction": "This is the reveal payoff — costume must read as fully finished and continuous with the helmet, no visible seam or gap at the neckline."
+        }
+      },
+      "transformation_direction": {
+        "trigger": "Single finger snap of the free hand at chest height, synced to a sharp audio snap/whoosh",
+        "mechanic": "Hard cut on the snap frame masked by a 2-3 frame light bloom overlay — instantaneous, not a slow morph or dissolve; this is what performs on TikTok's outfit-change trend format",
+        "continuity": "Seated position, chair, room, lighting, camera framing, and helmet are held constant across the cut — only the visible outfit below the neck changes from dress+stockings to full plugsuit",
+        "costume_result": "Complete EVA-02 orange/red plugsuit matching Photo 1's turnaround exactly — visible panel seams, green chest stripe, connector ports, suit collar meeting the base of the already-worn helmet with no visible gap",
+        "helmet_state": "Unchanged throughout — same weathered prop helmet from Photo 3, visor stays down the entire clip, no helmet removal or redesign at any point"
+      },
+      "camera_behavior": {
+        "device": "iPhone mirror selfie — matches Photo 2's exact framing and crop (full body to mid-thigh)",
+        "movement": "Mostly static with natural handheld micro-shake like a real mirror selfie; subtle push-in only during the 4-10s reveal segment",
+        "framing": "Consistent across the whole clip so the snap-cut reads as one continuous shot interrupted only by the flash"
+      },
+      "negative_prompt": "slow dissolve, blurry transition, morphing face, extra limbs, warped hands, distorted chair, character face visible under visor, helmet removed, helmet redesigned mid-clip, mismatched lighting between the two halves, inconsistent room or chair, plastic skin, beauty filter, low-resolution costume texture, anime cel-shading on the live-action suit, wrong stripe colors, missing green chest stripe, watermark, text overlay",
+      "settings": {
+        "resolution": "1080x1920",
+        "aspect_ratio": "9:16",
+        "duration": "10 seconds",
+        "style": "UGC mirror-selfie cosplay reveal, TikTok outfit-transition trend format",
+        "lighting": {
+          "type": "warm practical lamp / golden-hour light matching Photo 2, unchanged across the cut",
+          "colour_temperature": "warm golden"
+        },
+        "environment": {
+          "location": "bedroom / gaming setup matching Photo 2's background — desk, chair, soft furnishings",
+          "chair": "black-and-grey gaming chair from Photo 2, held constant"
+        },
+        "audio": {
+          "snap_cue": "sharp finger-snap sound synced exactly to the flash frame",
+          "trend_track_note": "cut point should land on a beat-drop if a trending audio track is layered externally — standard practice for outfit-transition edits"
+        },
+        "transition_rules": {
+          "hold_pose_across_cut": true,
+          "keep_helmet_constant": true,
+          "single_hard_cut_not_morph": true,
+          "light_flash_must_mask_seam": true,
+          "no_face_reveal": true
+        },
+        "explicit_restrictions": {
+          "no_slow_morph": true,
+          "no_helmet_change": true,
+          "no_lighting_shift_across_cut": true,
+          "no_room_change": true
+        },
+        "color_grading": "identical warm grade on both halves of the cut so the transition doesn't reveal itself through a color shift"
+      }
+    }
   }
 ]
