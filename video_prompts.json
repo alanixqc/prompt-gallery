@@ -133,11 +133,11 @@
       "aspect_ratio": "9:16"
     },
     "video_prompt": {
-      "prompt": "Young woman with wavy blonde-to-light-brown balayage hair, fair skin with light natural freckles across nose and cheeks, blue eyes, seated cross-legged in a black-and-grey gaming chair in a bedroom lit by warm golden lamp/sunset light. She is wearing a form-fitting black mini dress and sheer black thigh-high stockings, holding a phone up for a mirror selfie. Clip opens with no helmet and no suit — just the reference outfit. Two snap-transitions follow: the first equips the helmet, the second equips the full plugsuit. Preserve her exact body proportions, seated pose, room, gaming chair, and lighting throughout the entire clip — only the helmet and bodysuit are ever added, nothing else changes. The plugsuit's colorway must match the helmet exactly: aged metallic red-and-silver with chipped, scratched battle-worn paint and a matte metallic sheen — NOT the clean saturated orange/red of the illustrated character sheet, which is used for panel-line shape only.",
+      "prompt": "Young woman with wavy blonde-to-light-brown balayage hair, fair skin with light natural freckles across nose and cheeks, blue eyes, seated cross-legged in a black-and-grey gaming chair in a bedroom lit by warm golden lamp/sunset light. She is wearing a form-fitting black mini dress and sheer black thigh-high stockings, holding a phone up for a mirror selfie. Clip opens with no helmet and no suit — just the reference outfit. Two snap-transitions follow: the first equips the helmet, the second equips the full plugsuit. Preserve her exact body proportions, seated pose, room, gaming chair, and lighting throughout the entire clip — only the helmet and bodysuit are ever added, nothing else changes. The plugsuit's colorway must match the helmet in EVERY point: uniform aged metallic red-and-silver with chipped, scratched battle-worn paint and a matte metallic sheen across the entire suit, with no separate accent colors anywhere — no green chest stripe, no white connector ports. The illustrated character sheet is used for panel-line shape only; none of its coloring (not even accent details) carries over.",
       "reference_images": {
         "model_reference": "Photo 2 — source of identity, body proportions, seated pose, gaming chair, room, and lighting. Held constant, never altered.",
-        "costume_shape_reference": "Photo 1 — official EVA-02 plugsuit character sheet, used ONLY for panel-line shape and cut: fitted bodysuit with black side panels, green centre-chest stripe, white core connector ports, integrated gloves and boots, curved seams matching torso/hip lines. Its bright clean orange colour is NOT used.",
-        "helmet_and_color_reference": "Photo 3 — physical prop build of the helmet: scratched/chipped metallic red-and-silver paint, matte battle-worn finish, dark blue visor. This is the color/material source for BOTH the helmet and the plugsuit — the suit must look like it was cut from the same weathered metallic material as the helmet shell."
+        "costume_shape_reference": "Photo 1 — official EVA-02 plugsuit character sheet, used ONLY for panel-line shape and cut: fitted bodysuit silhouette, integrated gloves and boots, curved seams matching torso/hip lines. NONE of its coloring is used — not the bright orange base, not the green stripe, not the white connector ports.",
+        "helmet_and_color_reference": "Photo 3 — physical prop build of the helmet: scratched/chipped metallic red-and-silver paint, matte battle-worn finish, dark blue visor. This is the color/material source for BOTH the helmet and the entire plugsuit — every surface of the suit must read as cut from the exact same weathered metallic sheet as the helmet shell, uniform from collar to boots."
       },
       "script": null,
       "motion_breakdown": {
@@ -158,15 +158,15 @@
           "direction": "Hard cut sold by the light flash and a synced snap/whoosh cue. Chair, framing, and lighting must not shift across the cut — only the outfit beneath the neck changes."
         },
         "6-10s": {
-          "action": "She is now in the complete plugsuit, colour-matched to the helmet's weathered metallic red-and-silver finish, seated in the identical cross-legged pose in the same chair. Helmet is unchanged from the first transition. Camera does a subtle 5-8% push-in for payoff. Free hand returns to hold the phone up, completing the selfie framing. Small confident chair swivel to sell the reveal since her face stays hidden behind the visor. Hold the pose through the outro.",
-          "direction": "Final reveal payoff — suit must read as cut from the same material as the helmet, continuous at the neckline, no visible seam or gap, no color mismatch."
+          "action": "She is now in the complete plugsuit, uniformly colour-matched to the helmet's weathered metallic red-and-silver finish across every panel — no green stripe, no white connectors, no accent colors of any kind — seated in the identical cross-legged pose in the same chair. Helmet is unchanged from the first transition. Camera does a subtle 5-8% push-in for payoff. Free hand returns to hold the phone up, completing the selfie framing. Small confident chair swivel to sell the reveal since her face stays hidden behind the visor. Hold the pose through the outro.",
+          "direction": "Final reveal payoff — suit must read as cut from the exact same material as the helmet, continuous at the neckline, no visible seam, no accent colors, no color mismatch anywhere."
         }
       },
       "transformation_direction": {
         "trigger": "Two single finger-snaps of the free hand at chest height, each synced to a sharp audio snap/whoosh — one to equip the helmet (1-2s), one to equip the suit (5-6s)",
         "mechanic": "Hard cut on each snap frame masked by a matching 2-3 frame light bloom overlay — instantaneous both times, not a slow morph or dissolve; identical mechanic repeated so the two beats read as one consistent visual language",
         "continuity": "Seated position, chair, room, lighting, and camera framing are held constant across both cuts — only helmet (after snap 1) and suit (after snap 2) are added, in that order, and never removed once added",
-        "costume_result": "Complete plugsuit matching Photo 1's panel-line shape exactly but recoloured to match Photo 3's weathered metallic red-and-silver finish — chipped paint accents, matte metallic sheen, visible panel seams, green chest stripe, connector ports, suit collar meeting the helmet base with no visible gap or colour break",
+        "costume_result": "Complete plugsuit matching Photo 1's panel-line shape exactly but entirely recoloured to Photo 3's weathered metallic red-and-silver finish — uniform chipped paint and matte metallic sheen across every panel and seam, NO green chest stripe, NO white connector ports, NO accent colors of any kind, suit collar meeting the helmet base with no visible gap or colour break",
         "helmet_state": "Appears at the first snap (1-2s) and is unchanged for the rest of the clip — same weathered prop helmet from Photo 3, visor stays down, no removal or redesign at any point"
       },
       "camera_behavior": {
@@ -174,7 +174,7 @@
         "movement": "Mostly static with natural handheld micro-shake like a real mirror selfie; subtle push-in only during the 6-10s reveal segment",
         "framing": "Consistent across the whole clip so both snap-cuts read as one continuous shot interrupted only by the flashes"
       },
-      "negative_prompt": "slow dissolve, blurry transition, morphing face, extra limbs, warped hands, distorted chair, character face visible under visor, helmet removed, helmet redesigned mid-clip, bright saturated orange suit, unweathered clean suit color, suit color mismatched from helmet, flat cel-shaded texture on suit, mismatched lighting between segments, inconsistent room or chair, plastic skin, beauty filter, low-resolution costume texture, anime cel-shading on the live-action suit, wrong stripe colors, missing green chest stripe, watermark, text overlay",
+      "negative_prompt": "slow dissolve, blurry transition, morphing face, extra limbs, warped hands, distorted chair, character face visible under visor, helmet removed, helmet redesigned mid-clip, bright saturated orange suit, unweathered clean suit color, suit color mismatched from helmet, green chest stripe, white connector ports, any accent color on the suit different from the helmet, multi-color suit, flat cel-shaded texture on suit, mismatched lighting between segments, inconsistent room or chair, plastic skin, beauty filter, low-resolution costume texture, anime cel-shading on the live-action suit, watermark, text overlay",
       "settings": {
         "resolution": "1080x1920",
         "aspect_ratio": "9:16",
@@ -197,7 +197,7 @@
         "transition_rules": {
           "hold_pose_across_cuts": true,
           "helmet_appears_before_suit": true,
-          "suit_color_matches_helmet": true,
+          "suit_color_matches_helmet_exactly_no_accents": true,
           "double_hard_cut_not_morph": true,
           "light_flash_must_mask_seam": true,
           "no_face_reveal": true
@@ -207,10 +207,21 @@
           "no_helmet_change_after_first_snap": true,
           "no_lighting_shift_across_cuts": true,
           "no_room_change": true,
-          "no_bright_clean_orange_suit": true
+          "no_bright_clean_orange_suit": true,
+          "no_green_chest_stripe": true,
+          "no_white_connector_ports": true,
+          "no_accent_colors_on_suit": true
         },
-        "color_grading": "identical warm grade across all three segments so the transitions don't reveal themselves through a color shift; suit and helmet must read as the same weathered metallic material under this grade"
+        "color_grading": "identical warm grade across all three segments so the transitions don't reveal themselves through a color shift; suit and helmet must read as one uniform weathered metallic material under this grade, with zero color variation between them"
       }
+    },
+    "full_reference_rewrite": {
+      "subject_definitions": "<Subject 1> is the young woman in <Picture 1>, with wavy blonde-to-light-brown balayage hair, fair skin with light natural freckles across her nose and cheeks, blue eyes, seated cross-legged in a black-and-grey gaming chair in a warm golden-lit bedroom, holding a phone up for a mirror selfie. Her identity, body proportions, seated pose, chair, room, and lighting are held constant for the entire clip.\n<Subject 2> is the pilot helmet in <Picture 3>, with an aged metallic red-and-silver shell, chipped and scratched battle-worn paint, a matte finish, a dark blue-tinted visor, and fin-shaped ear pieces.\n<Subject 3> is the EVA-02 plugsuit, whose panel-line shape and cut come from <Picture 2> — fitted bodysuit silhouette, integrated gloves and boots, curved seams matching torso/hip lines — but whose color is fully overridden: every surface, including what would normally be a green chest stripe and white connector ports, is the exact same aged metallic red-and-silver as <Subject 2>, with matching chipped paint and matte sheen, so suit and helmet read as one uniform material with zero color variation anywhere.",
+      "summary": "[keyframe completion + reference generation] The target video opens on <Subject 1> established by <Picture 1> as the literal first frame of [Shot 1], seated in her gaming chair with no helmet and no suit. Two rapid snap-transitions punch through the clip: the first equips <Subject 2>, the weathered helmet; the second equips <Subject 3>, the plugsuit uniformly recolored to match the helmet with no accent colors of any kind. A 180 BPM cyberpunk track drives both cuts.",
+      "retention_analysis": "<Picture 1> ([Shot 1] first frame): fully_preserved - the woman's identity, seated pose, gaming chair, room, and lighting are used unchanged as the literal opening frame and held constant for the rest of the clip.\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - appearance, proportions, pose, chair, and lighting never change; only her worn items do.\n<Subject 2> (appears in [Shot 2], [Shot 3]): fully_preserved - the helmet's weathered metallic shell, chipped paint, visor, and ear fins are kept exactly as in <Picture 3> from the moment it appears onward.\n<Subject 3> (appears in [Shot 3]): attribute_transfer - Picture 2's panel-line shape is retained but ALL of its coloring is discarded in favor of <Subject 2>'s uniform metallic red-and-silver finish, including the accent details (chest stripe, connector ports) that Picture 2 originally rendered in different colors.",
+      "detailed_description": "The target video is a live-action, UGC mirror-selfie cosplay reveal in a TikTok double outfit-transition format, punchy and high-energy, warm golden-hour lighting throughout.\n[Shot 1] The shot begins from <Picture 1>: <Subject 1> sits cross-legged in her gaming chair in a fitted black mini dress and sheer black thigh-high stockings, phone held up for the mirror selfie. The camera holds a static shot for less than a second — just long enough to register the plain 'before' state — before her free hand snaps once at chest height.\n[Shot 2] At 00:01.000, the shot cuts on the snap: a hard two-frame white-orange flash detonates across her head and shoulders while the camera zooms in with small amplitude at fast speed for a punch-in hit. When the flash clears, <Subject 2> is already on her head, visor down, chipped metallic paint catching the lamp light. She holds the pose for a beat, small chair swivel, head tilting toward the camera, free hand drifting back to her chest as tension snaps tight toward the next hit.\n[Shot 3] At 00:05.000, the shot cuts again on her second snap: the same hard flash sweeps her whole seated body while the camera zooms in with small amplitude at fast speed a second time, echoing the first punch. When it clears, she's in <Subject 3>, the complete plugsuit reading as cut from the exact same weathered metal as the helmet — uniform chipped paint and matte sheen across every panel and seam, no green stripe, no white connectors, no accent color anywhere, collar meeting the helmet base with zero gap or colour break. She snaps the chair around to face camera dead-on and raises the phone back into frame, holding the pose hard through the outro.",
+      "overall_soundscape": "A sharp finger-snap and whoosh detonates on each of the two flash cuts, synced exactly to the 00:01.000 and 00:05.000 frames, with a faint low-frequency thump underneath each hit for extra punch; otherwise the room stays quiet with only a trace of ambient bedroom tone.",
+      "non_diegetic_music": "A driving cyberpunk synth track at 180 BPM runs under the whole clip, aggressive and propulsive; both snap-cuts land squarely on the beat, with the second hitting the strongest downbeat in the track for the final reveal."
     }
   }
 ]
