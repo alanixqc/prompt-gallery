@@ -1,0 +1,111 @@
+[
+  {
+    "id": "3ZUR3_VID_01_LION_TROPICAL",
+    "tags": [
+      "3zur3",
+      "nsfw",
+      "video",
+      "selfie",
+      "tropical",
+      "pool lounger",
+      "bikini",
+      "leopard print",
+      "gold jewelry",
+      "clover jewelry",
+      "lion",
+      "exotic animal",
+      "live stream",
+      "iphone selfie",
+      "12s"
+    ],
+    "classification": {
+      "personnage": "3zur3",
+      "type": "video_prompt",
+      "shots": 3,
+      "duration": "12s",
+      "aspect_ratio": "9:16"
+    },
+    "video_prompt": {
+      "prompt": "Southern European or mixed-ethnicity woman, late 20s to early 30s, warm sun-tanned skin with natural sun pigmentation — irregular melanin clustering across nose bridge and upper cheeks, varying depths some near-invisible, not cosmetic freckles. Medium brown hair pulled into a messy high bun — loose strands falling at temples and nape, natural frizz on top, bun not perfectly round, slight sun-bleached lighter strands visible at crown. Green-hazel eyes with visible iris texture and depth, natural lashes, slight asymmetry between eyes. Visible pores on nose and inner cheeks, natural sebum sheen on T-zone, sun-warmed glow on nose bridge and cheekbones from direct outdoor light, slight redness at nose tip, natural under-eye shadow. Wearing leopard print and tropical floral bikini top with gold ring hardware at center, gold Van Cleef style clover necklace layered, gold clover drop earrings, gold Van Cleef clover bracelet on wrist. She is reclined on a sun lounger with a teal/dark green beach towel draped over it, tropical resort setting — lush palm trees, large tropical leaves, wooden pergola structure behind, bright direct tropical sun overhead. Shot on iPhone front camera, arm-extended selfie angle, slight high angle. Bright tropical midday sun — strong direct light on face and chest, natural sun shadows under nose and chin, warm golden skin tone amplified by direct sunlight. Do not smooth skin. No beauty filter. Preserve exact facial identity, sun pigmentation, jewelry, and bikini throughout entire video.",
+      "script": {
+        "line_1": "Hey baby… come here.",
+        "line_2": "Look — we're live right now, and they really wanna see you… say hello."
+      },
+      "motion_breakdown": {
+        "0-2s": {
+          "action": "She is relaxed and reclined, not fixed or posed — head turns slightly to the left off camera, casual and warm. She shifts her body weight naturally on the lounger, one shoulder rolling forward slightly. Her hand drops away from her face completely — resting on her chest or the towel beside her. She calls out with a relaxed half-smile, eyes soft and expectant, glancing off to the side. Natural micro-movements — slight hair movement from breeze, fabric of bikini top shifting with breath.",
+          "script": "Hey baby… come here.",
+          "speech_direction": "Warm, casual, affectionate — like calling a pet. Slight pause between 'baby' and 'come here'. Not loud — conversational volume, intimate tone. Lips move naturally, jaw relaxed."
+        },
+        "2-6s": {
+          "action": "Adult male lion with full thick mane walks slowly into frame from the left side — large, heavy, natural gait, paws landing with weight. Lion approaches her lounger and lowers its large head toward her torso and shoulder area. She reacts with immediate genuine delight — eyes widening, smile breaking naturally, body shifting toward the lion. Her hand reaches out and begins stroking the lion's mane — fingers pressing into the thick fur, hand moving in a slow natural rubbing motion along the side of the mane and behind the ear. Her other arm wraps loosely around the lion's neck. Natural weight transfer — the lion's presence causes the lounger to shift slightly, her body adjusting. Lion's tail moves slowly. Lion exhales — slight nostril flare visible.",
+          "script": "[No dialogue — reaction and physical interaction]",
+          "direction": "The woman's reaction must look completely natural and unsurprised — she knows this lion. Not fearful, not performative excitement. The hand rubbing the mane is the most important physical detail — fingers visibly pressing into fur with real contact, not hovering. Her face turns toward the lion briefly then back toward camera."
+        },
+        "6-12s": {
+          "action": "She turns her face back toward the camera — now holding the phone up or looking directly at the lens, lion's large head resting against her shoulder or chest, mane filling the left side of frame. Her hand continues slow rhythmic strokes on the lion's mane throughout — never stops. Expression is playful and warm, eyebrows raised slightly, smile natural and asymmetric. Free hand gestures loosely toward the lion on 'you'. At the end of the line she glances at the lion with a fond expression then back to camera. The lion shifts its head slightly — natural animal movement, blinks slowly, nostril flare. Bright sun catches the lion's mane — warm golden tones in the fur. Breeze moves loose strands of her hair.",
+          "script": "Look — we're live right now, and they really wanna see you… say hello.",
+          "speech_direction": "Playful, warm, slightly conspiratorial — like she's showing off her best friend. 'Look' said directly to camera with eyebrow raise. Slight pause before 'say hello', eyes flicking to lion on 'you'. Ends with a soft laugh or smile breaking through on 'say hello'."
+        }
+      },
+      "lion_direction": {
+        "breed": "Adult male African lion, full thick dark-gold mane, large heavy body, amber eyes",
+        "entry": "Walks in from left side of frame at 2s — slow natural gait, heavy paw placement, head slightly lowered as it approaches",
+        "behaviour": "Calm, familiar, affectionate — not aggressive, not performing. Lowers head onto her shoulder/chest. Slow tail movement throughout. One slow blink. Nostril flare on exhale. Minor head shift at 10s — natural animal restlessness not a jump",
+        "fur_detail": "Thick mane with natural variation in colour — darker at roots, golden-amber at tips, individual strands visible, slight wind movement. Sun catches top of mane — warm specular highlight. Her fingers visibly press into and displace the fur when stroking",
+        "scale": "Lion's head when lowered is roughly the same width as her torso — the size contrast is part of the visual impact"
+      },
+      "camera_behavior": {
+        "device": "iPhone front camera — arm-extended selfie",
+        "movement": "Slight natural hand movement throughout — not stabilised. At 6s when she reorients to camera, brief natural camera reframe — arm adjusting position causes 1-2 second slight shake before settling",
+        "framing_0_to_2s": "Face and upper chest — loose relaxed framing, head turn visible",
+        "framing_2_to_6s": "Camera stays roughly in place as lion enters — lion's head and mane fill left side of frame, her reaction fills right",
+        "framing_6_to_12s": "Slightly wider — both her face and lion's head visible in frame together, her hand on mane visible"
+      },
+      "negative_prompt": "plastic skin, waxy skin, airbrushed skin, poreless skin, glass skin, beauty filter, skin smoothing, CGI lion, cartoon lion, stuffed animal, fake fur, frozen expression, posed expression, hand fixed to lips, eyes fixed on phone, robotic movement, stiff animal movement, studio lighting, professional retouching, heavy makeup, oversaturated, HDR, Instagram filter, fearful expression, surprised expression, inconsistent face across shots, missing jewelry, wrong bikini pattern",
+      "settings": {
+        "resolution": "1080x1920",
+        "aspect_ratio": "9:16",
+        "duration": "12 seconds",
+        "style": "candid selfie video, UGC realism, exotic animal encounter, tropical resort",
+        "lighting": {
+          "type": "direct tropical midday sun — overhead natural sunlight",
+          "behaviour": "Strong warm light on face and chest, natural nose shadow, sun-warmed skin glow, golden highlight on lion mane crown",
+          "colour_temperature": "warm golden daylight"
+        },
+        "environment": {
+          "location": "tropical resort pool or garden area",
+          "background": "lush palm trees, large tropical leaves, wooden pergola structure, bright sky partially visible",
+          "lounger": "reclined sun lounger with teal dark-green beach towel",
+          "breeze": "light tropical breeze — moves loose hair strands and large tropical leaves throughout"
+        },
+        "physical_interaction_rules": {
+          "hand_must_stroke_lion_mane": true,
+          "fingers_must_visibly_displace_fur": true,
+          "hand_must_NOT_be_fixed_to_lips": true,
+          "eyes_must_NOT_be_fixed_on_phone": true,
+          "lion_must_have_weight_and_presence": true,
+          "woman_must_not_look_surprised_or_fearful": true,
+          "natural_body_adjustment_from_lion_weight": true
+        },
+        "audio": {
+          "line_1_tone": "warm, affectionate, casual — calling a familiar animal",
+          "line_2_tone": "playful, conspiratorial, warm — showing off to an audience",
+          "natural_sounds": "light ambient tropical birds, slight wind, lion exhale audible at close range"
+        },
+        "explicit_restrictions": {
+          "no_beauty_filter": true,
+          "no_CGI_lion": true,
+          "no_hand_fixed_to_face": true,
+          "no_phone_stare": true,
+          "no_studio_lighting": true,
+          "no_fearful_expression": true,
+          "preserve_sun_pigmentation": true,
+          "preserve_all_gold_jewelry": true,
+          "preserve_leopard_bikini": true
+        },
+        "color_grading": "natural — warm tropical sun tones, no grade applied, slightly high contrast from direct midday sun"
+      }
+    }
+  }
+]
