@@ -223,5 +223,37 @@
       "overall_soundscape": "A sharp finger-snap and whoosh detonates on each of the two flash cuts, synced exactly to the 00:01.000 and 00:05.000 frames, with a faint low-frequency thump underneath each hit for extra punch; otherwise the room stays quiet with only a trace of ambient bedroom tone.",
       "non_diegetic_music": "A driving cyberpunk synth track at 180 BPM runs under the whole clip, aggressive and propulsive; both snap-cuts land squarely on the beat, with the second hitting the strongest downbeat in the track for the final reveal."
     }
+  },
+  {
+    "id": "GOLD_ARMOR_VID_01_BEDROOM_SNAP_TRANSITION",
+    "tags": [
+      "cosplay",
+      "fantasy armor",
+      "gold armor",
+      "tactical armor",
+      "video",
+      "tiktok trend",
+      "outfit transition",
+      "snap transition",
+      "bedroom",
+      "selfie",
+      "reference-based",
+      "10s"
+    ],
+    "classification": {
+      "personnage": "gold_armor_cosplay",
+      "type": "video_prompt",
+      "shots": 3,
+      "duration": "10s",
+      "aspect_ratio": "9:16"
+    },
+    "full_reference_rewrite": {
+      "subject_definitions": "<Subject 1> is the young woman in <Picture 3>, with wavy blonde hair, damp/tousled loose strands framing her face and pulled back into a messy high ponytail, fair skin with light natural freckles scattered across her nose and cheeks, blue eyes, small gold hoop earrings, and a calm direct expression. Before any transformation she wears a white half-zip cropped top and pink fleece sweatpants. Her identity, face, and body proportions are held constant for the entire clip; her seated position and framing are newly staged for this scene rather than copied from Picture 3's car setting.\n<Subject 2> is the bedroom environment in <Picture 1>: a neatly made bed with light grey/cream linens against the left wall, a wooden nightstand with a warm glowing lamp beside it, sheer curtains filtering fading daylight from a window on the left, a potted plant and a white drawer unit near a desk in the foreground, beige carpet, and an open doorway on the right spilling warm hallway light across the floor. Held constant, never altered.\n<Subject 3> is the full armor set in <Picture 2>: a spiked, gold-crested helmet with a dark reflective visor, a tattered black fabric scarf knotted at the neck, a gold metallic chest plate with layered panel lines worn over a fitted black underlayer, gold-armored gauntlets over black fingerless gloves, a black tactical utility belt with a gold buckle and pouches, and gold heavy leg guards over black boots. Every gold surface shares the same brushed metallic finish and every black surface the same leather/fabric texture, exactly as broken down in <Picture 2>.",
+      "summary": "[reference generation] The target video places <Subject 1> into <Subject 2>'s warmly lit bedroom, seated on the edge of the bed with no armor. Two rapid snap-transitions punch through the clip: the first equips the helmet and scarf from <Subject 3>, the second equips the remaining chest plate, gauntlets, belt, and leg guards, completing the full gold-and-black armor set exactly as defined in <Picture 2>.",
+      "retention_analysis": "<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her face, identity, and body proportions never change; only her worn items and immediate pose do.\n<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - the bed, nightstand, lamp glow, curtains, plant, carpet, and doorway light are held constant across all three shots.\n<Subject 3> (appears in [Shot 2] partially, [Shot 3] fully): partially_preserved in [Shot 2] - only the helmet and scarf component of the full set appears first; fully_preserved in [Shot 3] - the complete armor set matches <Picture 2>'s breakdown piece for piece, with no color or shape deviation.",
+      "detailed_description": "The target video is a live-action, UGC bedroom selfie in a TikTok double outfit-transition format, punchy and high-energy, warm evening lamplight throughout.\n[Shot 1] A medium shot establishes <Subject 1> seated on the edge of the bed inside <Subject 2>'s bedroom, the nightstand lamp glowing warmly behind her and soft hallway light spilling through the open doorway. She wears her white half-zip top and pink sweatpants, phone held up in a raised selfie angle, her free hand resting near her collarbone. The camera holds a static shot for less than a second to register the plain 'before' state before her free hand snaps once at chest height.\n[Shot 2] At 00:01.000, the shot cuts on the snap: a hard two-frame white-gold flash detonates across her head and neck while the camera zooms in with small amplitude at fast speed for a punch-in hit. When the flash clears, the gold-crested helmet from <Subject 3> is on her head, dark visor down, spiked golden fin catching the lamp light, with the tattered black scarf now knotted at her neck and trailing over her shoulder. She holds the pose for a beat, a small shift of her shoulders, free hand drifting back toward her chest as tension builds toward the next hit.\n[Shot 3] At 00:05.000, the shot cuts again on her second snap: the same hard flash sweeps her whole seated body while the camera zooms in with small amplitude at fast speed a second time, echoing the first punch. When it clears, she's in the complete <Subject 3> armor set — gold metallic chest plate over the black underlayer, gold gauntlets over black gloves on both forearms, the black-and-gold tactical belt at her waist, and gold leg guards over black boots — matching <Picture 2>'s breakdown exactly, helmet and scarf unchanged from the first transition. She rises slightly off the bed into a confident kneeling stance and squares up to the camera, holding the pose hard through the outro as the lamp light rakes across the gold plating.",
+      "overall_soundscape": "A sharp finger-snap and whoosh detonates on each of the two flash cuts, synced exactly to the 00:01.000 and 00:05.000 frames, with a low metallic clank layered under the second hit as the armor plates lock into place; otherwise the room stays quiet with only a faint hum of evening ambience.",
+      "non_diegetic_music": "A hybrid cinematic-synth trailer track drives the clip, low pulsing synth bass building under Shot 1, then a rising brass-synth swell hits exactly on each snap-cut, with the second hit landing on the track's strongest downbeat for the final reveal."
+    }
   }
 ]
