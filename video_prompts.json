@@ -255,5 +255,35 @@
       "overall_soundscape": "A sharp finger-snap and whoosh detonates on each of the two flash cuts, synced exactly to the 00:01.000 and 00:05.000 frames, with a low metallic clank layered under the second hit as the armor plates lock into place; otherwise the room stays quiet with only a faint hum of evening ambience.",
       "non_diegetic_music": "A hybrid cinematic-synth trailer track drives the clip, low pulsing synth bass building under Shot 1, then a rising brass-synth swell hits exactly on each snap-cut, with the second hit landing on the track's strongest downbeat for the final reveal."
     }
+  },
+  {
+    "id": "DANCE_VID_01_VOICES_IN_MY_HEAD",
+    "tags": [
+      "dance",
+      "music sync",
+      "audio reuse",
+      "falling in reverse",
+      "selfie identity ref",
+      "h3",
+      "reference-based",
+      "15s"
+    ],
+    "classification": {
+      "personnage": "dance_identity_h3",
+      "type": "video_prompt",
+      "shots": 1,
+      "duration": "15s",
+      "aspect_ratio": "9:16",
+      "audio_source": "Falling In Reverse - Voices In My Head, excerpt 02:38.00-02:53.00",
+      "audio_analysis_note": "Excerpt chosen from real RMS-energy analysis of the source file: a ~5s quiet breakdown (approx. 00:01.000-00:06.000 in the excerpt) swells into the loudest sustained section of the entire track by approx. 00:11.000. Local tempo in this window measured at ~117 BPM."
+    },
+    "full_reference_rewrite": {
+      "subject_definitions": "<Subject 1> is the young woman in <Picture 1> (h3 identity reference), with long wavy blonde-to-light-brown balayage hair, fair sun-kissed skin with light freckles across her nose and cheeks, blue eyes, a warm natural smile, wearing a white ribbed scoop-neck tank top and black high-waisted leggings, standing in a plain white-walled room. Her identity, face, and body proportions are held constant for the entire clip; her static arm-extended selfie pose from Picture 1 is not retained past the opening beat.\n<Audio 1> is a 15-second excerpt of the uploaded track 'Voices In My Head' by Falling In Reverse, taken from the 02:38.00-02:53.00 mark of the source file — a quiet, sparse breakdown that swells over roughly six seconds into the song's loudest, fullest section. It is reused as the target video's complete final audio track.",
+      "summary": "[keyframe completion + audio reuse] The target video opens on <Subject 1>, established by <Picture 1> as the literal first frame of [Shot 1]. <Audio 1> is copied in full as the video's soundtrack, and her dancing is choreographed to match its real measured energy curve: restrained through the quiet opening, then bursting into full dynamic movement as the track swells into its loudest section.",
+      "retention_analysis": "<Picture 1> ([Shot 1] first frame): fully_preserved - the woman's identity, styling, and room are used unchanged as the literal opening frame; her arm-extended selfie pose is replaced by dance movement starting immediately after.\n<Subject 1> (appears in [Shot 1]): fully_preserved - her face, identity, hair, outfit, and body proportions never change; only her pose and motion do.\n<Audio 1>: fully_copy - the 15-second excerpt is reused 1:1 as the target video's complete final audio track, with the choreography timed to its real measured energy curve rather than an invented beat.",
+      "detailed_description": "The target video is a live-action, high-energy vertical dance clip, single continuous shot, natural indoor lighting matching <Picture 1>'s plain white room.\n[Shot 1] The shot begins from <Picture 1>: <Subject 1> stands facing the camera in her white tank top and black leggings, phone-selfie arm still raised for one beat as the tail of the previous musical section fades. She lowers her arm and plants both feet, settling into a loaded, coiled stance right as <Audio 1> drops into its hushed, sparse breakdown at 00:01.000. From 00:01.000 to roughly 00:06.000 she moves in tight, restrained isolations — slow rolling shoulders, a held head-tilt, hips barely shifting on the pulse — tension visibly building rather than releasing while the track stays quiet. Starting around 00:06.000 the track begins to swell, and her movement opens up with it: bigger hip rolls, arms unfolding overhead, hair whipping on the turns, footwork quickening in step with the rising instrumentation. The camera pushes in with small amplitude at slow speed through this build. By roughly 00:11.000 the track hits its loudest, fullest section and she breaks into a full dynamic dance run — sharp arm hits, a quick spin, chest pops, and hard hair whips landing right on the beat — sustained at full intensity through the rest of the clip. The camera holds a static shot for the final hits so the movement itself carries all the energy, ending on a strong hit-pose exactly as the excerpt closes at 00:15.000.",
+      "overall_soundscape": "Only faint room tone underlies the shot; there is no separate ambient sound beyond the reused track.",
+      "non_diegetic_music": "<Audio 1> is directly reused as the complete audience-only score: a hushed, sparse breakdown from 00:01.000-00:06.000 swelling steadily into the loudest, fullest section of the track by 00:11.000, sustained through the end of the clip."
+    }
   }
 ]
